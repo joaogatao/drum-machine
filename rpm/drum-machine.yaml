@@ -1,0 +1,30 @@
+Name: drum-machine
+Summary: Drum Machine
+Version: 0.3
+Release: 1
+Group: Qt/Qt
+URL: http://example.org/
+License: LICENSE
+Sources:
+- '%{name}-%{version}.tar.bz2'
+Description: |
+  Simple drum machine for Sailfish OS
+Configure: none
+Builder: qtc5
+PkgConfigBR:
+  - sailfishapp >= 0.1
+  - keepalive
+  - Qt5Core
+  - Qt5Qml
+  - Qt5Quick
+Requires:
+  - sailfishsilica-qt5 >= 0.10.9
+Files:
+  - '%{_datadir}/icons/hicolor/86x86/apps/%{name}.png'
+  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/%{name}/qml'
+  - '%{_bindir}'
+  - /usr/bin
+  - /usr/share/drum-machine
+  - /usr/share/applications
+  - /usr/share/icons/hicolor/86x86/apps

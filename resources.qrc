@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="bassaudio.wav">res/Korg-TR-Rack-Standard-Kit-Bass-Drum-2.wav</file>
+        <file alias="tomaudio.wav">res/Roland-R-8-Room-Tom-4.wav</file>
+        <file alias="snareaudio.wav">res/Roland-R-8-Tight-Snare.wav</file>
+        <file alias="hihataudio.wav">res/Korg-NS5R-Power-Closed-Hi-Hat.wav</file>
+    </qresource>
+</RCC>
