@@ -1,8 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-import org.nemomobile.keepalive 1.1
-
 import "pages"
 import "components"
 
@@ -15,7 +13,6 @@ ApplicationWindow
     onApplicationActiveChanged: {
         if(!applicationActive){
             drum._running = false
-            DisplayBlanking.preventBlanking = false;
         }
     }
 
