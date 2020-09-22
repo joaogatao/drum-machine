@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 import QtMultimedia 5.0
 
 //import drum.machine.components 1.0
-import org.nemomobile.keepalive 1.1
+import Nemo.KeepAlive 1.2
 
 import "../components"
 
@@ -94,7 +94,6 @@ Page {
                 text: qsTr("Save")
                 onClicked: {
                     drum._running = false
-                    DisplayBlanking.preventBlanking = false
                     pageStack.push(Qt.resolvedUrl("SavePage.qml"))
                 }
             }
@@ -117,7 +116,6 @@ Page {
                     anchors.fill: parent
                     onClicked:{
                         drumTimer.running = !drumTimer.running;
-                        DisplayBlanking.preventBlanking = drumTimer.running;
                     }
                 }
             }
@@ -135,5 +133,10 @@ Page {
             Beat{ beat: 8 }
 
         }
+    }
+
+    DisplayBlanking {
+        id: displayBlanking
+        preventBlanking: drumTimer.running && Qt.application.state == Qt.ApplicationActive
     }
 }
